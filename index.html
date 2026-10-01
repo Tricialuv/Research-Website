@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Patricia O. Nneji | Biology Researcher</title>
+<meta name="description" content="Patricia O. Nneji — biology educator and researcher in molecular biology, gene regulation, bioinformatics and infectious disease biology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#13263F; --muted:#506078; --blue:#1C5BA8; --blue-deep:#0F3D75;
+  --tint:#EEF4FB; --line:#D3E2F3;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{background:#FFFFFF;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--blue-deep)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:3px}
+img,svg{max-width:100%}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:0 24px;height:60px}
+.nav .name{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav ul a{display:block;padding:6px 11px;border-radius:999px;font-size:14.5px;color:var(--muted);text-decoration:none;white-space:nowrap}
+.nav ul a:hover{color:var(--blue-deep);background:var(--tint)}
+.nav ul a.active{color:var(--bg);background:var(--blue)}
+@media (max-width:760px){
+  .nav-inner{flex-direction:column;align-items:stretch;height:auto;gap:4px;padding:10px 16px 8px}
+  .nav ul{margin:0}
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 100px)}
+}
+main{max-width:1040px;margin:0 auto;padding:0 24px 80px}
+section{padding:56px 0 8px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.2;margin:0}
+h2{font-size:32px;padding-left:18px;border-left:4px solid var(--blue);margin-bottom:8px}
+.section-lede{color:var(--muted);margin:0 0 24px 22px;max-width:62ch}
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:center;padding:64px 0 48px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(40px,6vw,64px);letter-spacing:-0.01em}
+.hero .role{font-family:var(--serif);font-size:22px;color:var(--blue-deep);margin:12px 0 18px;font-style:italic}
+.hero p{max-width:58ch;margin:0 0 22px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1.5px solid var(--blue);border-radius:6px;font-size:15px;font-weight:500;text-decoration:none;color:var(--blue)}
+.btn:hover{background:var(--tint)}
+.btn.primary{background:var(--blue);color:var(--bg)}
+.btn.primary:hover{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--bg)}
+.helix{width:100%;height:auto;display:block}
+.helix path{fill:none;stroke-width:2.2;stroke-linecap:round}
+.helix .a{stroke:var(--blue)}
+.helix .b{stroke:var(--blue-deep);opacity:.55}
+.helix line{stroke:var(--line);stroke-width:2}
+.helix circle{fill:var(--blue)}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px}.hero svg{max-width:320px}}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-left:22px}
+.tag{padding:8px 14px;background:var(--tint);border:1px solid var(--line);border-radius:999px;font-size:15px;color:var(--blue-deep)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin:28px 0 0 22px;border-top:1px solid var(--line)}
+.fact{padding:16px 18px 4px 0}
+.fact strong{display:block;font-family:var(--serif);font-size:30px;font-weight:500;color:var(--blue)}
+.fact span{font-size:14.5px;color:var(--muted)}
+@media (max-width:600px){.facts{grid-template-columns:1fr 1fr}}
+.toolbar{display:flex;justify-content:flex-end;margin:-8px 0 10px}
+.toolbar button{font:inherit;font-size:14px;background:none;border:none;color:var(--blue);cursor:pointer;padding:4px 0;text-decoration:underline;text-underline-offset:3px}
+details{border:1px solid var(--line);border-radius:8px;margin:0 0 12px 22px;background:var(--bg)}
+details[open]{border-color:var(--blue)}
+summary{list-style:none;cursor:pointer;padding:16px 52px 16px 20px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:20px;top:50%;width:9px;height:9px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+summary h3{font-size:20px}
+summary .meta{display:block;font-size:14.5px;color:var(--muted);margin-top:2px}
+summary .desc{display:block;font-size:15px;color:var(--ink);margin-top:6px;max-width:68ch}
+.body{border-top:1px solid var(--line);margin:0 20px;padding:0 0 18px}
+.body ul{margin:14px 0 0;padding-left:20px}
+.body li{margin-bottom:6px;max-width:72ch}
+.entry{padding:14px 0;border-bottom:1px dashed var(--line)}
+.entry:last-child{border-bottom:none}
+.entry h4{margin:0;font-size:16.5px;font-weight:600}
+.entry .when{font-size:14px;color:var(--muted)}
+.entry ul{margin-top:8px}
+.count{display:inline-block;min-width:24px;padding:0 8px;margin-left:8px;border-radius:999px;background:var(--tint);color:var(--blue-deep);font-family:var(--sans);font-size:13px;font-weight:600;text-align:center;vertical-align:middle}
+.pub{padding:16px 0;border-bottom:1px dashed var(--line)}
+.pub:last-child{border-bottom:none}
+.pub .title{font-family:var(--serif);font-size:18.5px;line-height:1.35;margin:0 0 4px}
+.pub .authors{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+.pub .authors b{color:var(--ink);font-weight:600}
+.pub .venue{font-size:15px;margin:0}
+.pub .venue em{color:var(--ink)}
+.pub .role-badge{display:inline-block;font-size:12.5px;font-weight:600;color:var(--blue-deep);border:1px solid var(--line);border-radius:4px;padding:1px 7px;margin-right:6px}
+.skills{width:100%;border-collapse:collapse;margin-top:12px}
+.skills th,.skills td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.skills th{width:30%;font-weight:600;color:var(--blue-deep)}
+.table-wrap{overflow-x:auto}
+.contact{margin:0 0 0 22px;padding:28px;background:var(--tint);border-radius:10px;border:1px solid var(--line)}
+.contact p{margin:0 0 16px;max-width:60ch}
+footer{max-width:1040px;margin:0 auto;padding:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:var(--muted)}
+@media (max-width:600px){details,.section-lede,.tags,.facts,.contact{margin-left:0}h2{font-size:27px}}
+@media print{.nav,.toolbar{display:none}details{border:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Quick jump">
+  <div class="nav-inner">
+    <a class="name" href="#top">Patricia O. Nneji</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#training">Training &amp; honours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+
+  <header class="hero" id="about">
+    <div>
+      <h1>Patricia O. Nneji</h1>
+      <p class="role">Biology educator and researcher</p>
+      <p>I study how genes are regulated and how pathogens adapt, and I teach biology in ways that make those ideas concrete. My work spans malaria drug-resistance genetics, clinical laboratory practice and biology education research, with seven peer-reviewed publications to date.</p>
+      <div class="links">
+        <a class="btn primary" href="#publications">View publications</a>
+        <a class="btn" href="https://orcid.org/0009-0008-7007-903X" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://www.researchgate.net/profile/Patricia-Nneji" target="_blank" rel="noopener">ResearchGate</a>
+        <a class="btn" href="https://linkedin.com/in/patricia-nneji" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <svg class="helix" viewBox="0 0 320 300" role="img" aria-label="Stylised DNA double helix">
+      <g id="rungs"></g>
+      <path class="b" id="strandB"/>
+      <path class="a" id="strandA"/>
+    </svg>
+  </header>
+
+  <section id="research" aria-labelledby="h-research">
+    <h2 id="h-research">Research interests</h2>
+    <p class="section-lede">Molecular questions with public-health stakes, studied with wet-lab, computational and education-research methods.</p>
+    <div class="tags">
+      <span class="tag">Molecular and cellular biology</span>
+      <span class="tag">RNA biology and gene regulation</span>
+      <span class="tag">Molecular genetics</span>
+      <span class="tag">Bioinformatics and biological data analysis</span>
+      <span class="tag">Infectious disease biology</span>
+      <span class="tag">Biology education research</span>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>7</strong><span>Peer-reviewed publications</span></div>
+      <div class="fact"><strong>2</strong><span>Manuscripts under review</span></div>
+      <div class="fact"><strong>Top 1%</strong><span>Of graduating class, B.Sc.Ed. Biology</span></div>
+    </div>
+  </section>
+
+  <section id="publications" aria-labelledby="h-pubs">
+    <h2 id="h-pubs">Publications</h2>
+    <p class="section-lede">Open each group to see full citations. Titles link to the published article via DOI.</p>
+    <div class="toolbar"><button type="button" data-toggle="publications">Expand all</button></div>
+
+    <details open>
+      <summary>
+        <h3>Peer-reviewed articles <span class="count">7</span></h3>
+        <span class="desc">Infectious disease, environmental health, nanomedicine, pharmacology and biology education, 2023–2024.</span>
+      </summary>
+      <div class="body">
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.9734/jesbs/2024/v37i51322" target="_blank" rel="noopener">The impact of practical work experience on academic achievement in biology among senior secondary school students in Yenagoa Metropolis</a></p>
+          <p class="authors"><b>Nneji, P. O.</b>, Oshodi, P. A., Akomolede, S. K., Olosunde, J. O., Oboite, D. U., Nkwocha, S. T., Iweuno, B. N., Nkwocha, E. S., Badmus, A. H., Samson, K. A., &amp; Adenuga, A.</p>
+          <p class="venue"><span class="role-badge">First author</span><em>Journal of Education, Society and Behavioural Science</em>, 37(5), 49–61 (2024)</p>
+        </article>
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.47852/bonviewMEDIN42022945" target="_blank" rel="noopener">Environmental epigenetics and its impacts on disease susceptibility: A comprehensive review</a></p>
+          <p class="authors">Ogunjobi, T. T., Gbayisomore, T. J., <b>Nneji, P. O.</b>, Olofin, O. O., Olowe, E. N., Gigam-Ozuzu, C. D., Afolabi, J. I., Okwuokei, N. B., Boluwaji, V. A., Ojeniran, T. P., Ogini, I. O., Adesope, S. O., Yissa, T. D., &amp; Eji, C. A.</p>
+          <p class="venue"><em>Medinformatics</em> (2024)</p>
+        </article>
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.20883/medical.e965" target="_blank" rel="noopener">Mechanisms of obesogens and their impact on adipose tissue, hormones, and inflammation</a></p>
+          <p class="authors">Ogunjobi, T., Omiyale, C., Gbayisomore, T., Olofin, O., <b>Nneji, P.</b>, Onikeku, D., Oluwole, M., Ezeano, S., Soleye, D., Fadipe, D., Fakojo, S., Sulaiman, T., &amp; Ajayi, R.</p>
+          <p class="venue"><em>Journal of Medical Science</em>, 93(2), e965 (2024)</p>
+        </article>
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.1186/s11671-023-03936-z" target="_blank" rel="noopener">A review on selenium and gold nanoparticles combined photodynamic and photothermal prostate cancer tumors ablation</a></p>
+          <p class="authors">Omiyale, O. C., Musa, M., Otuyalo, A. I., Gbayisomore, T. J., Onikeku, D. Z., George, S. D., Popoola, P. O., Olofin, O. O., Umunnam, K. F., <b>Nneji, P. O.</b>, Adnan, M., &amp; Ogunjobi, T. T.</p>
+          <p class="venue"><em>Discover Nano</em>, 18(1), 150 (2023)</p>
+        </article>
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.30574/ijsra.2023.10.1.0825" target="_blank" rel="noopener">Evaluation of the anti-malarial properties of the combined aqueous and alcoholic extract of <i>Heliotropium indicum</i> and <i>Parquetina nigrescens</i></a></p>
+          <p class="authors">Faloye, D. A., Muoneke, J. N., Onyemeh, L. O., Ofor, O. C., <b>Nneji, P. O.</b>, Temitope, S., &amp; Ekeke, T. E.</p>
+          <p class="venue"><em>International Journal of Science and Research Archive</em>, 10(1), 802–811 (2023)</p>
+        </article>
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.9734/mrji/2023/v33i81398" target="_blank" rel="noopener">Exploring fungi-mediated biodegradation pathway of polymers in environmental systems (dump sites)</a></p>
+          <p class="authors">Olaide, Z., <b>Nneji, P. O.</b>, Esther, C. A., Obiefoka, S. O., Temitope, S., Mustapha, S., Adeyemi, A. K., &amp; Yahaya, R. A.</p>
+          <p class="venue"><em>Microbiology Research Journal International</em>, 33(8), 16–24 (2023)</p>
+        </article>
+        <article class="pub">
+          <p class="title"><a href="https://doi.org/10.9734/ajrimps/2023/v12i4226" target="_blank" rel="noopener">Evaluation of the antidiabetic potentials of <i>Musa acuminata</i> leaves crude extract in alloxan-induced Wistar rats</a></p>
+          <p class="authors">Freitas, A. A., Onyemeh, L. O., <b>Nneji, P. O.</b>, Ola, O. M., &amp; Faloye, D. A.</p>
+          <p class="venue"><em>Asian Journal of Research in Medical and Pharmaceutical Sciences</em>, 12(4), 7–15 (2023)</p>
+        </article>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <h3>Manuscripts under review <span class="count">2</span></h3>
+        <span class="desc">Narrative reviews on genomic surveillance and AI-driven nutrigenomics, submitted to Frontiers journals.</span>
+      </summary>
+      <div class="body">
+        <article class="pub">
+          <p class="title">Genomic surveillance of emerging infectious diseases: Implications for public health preparedness</p>
+          <p class="venue">Narrative review under review, <em>Frontiers in Public Health</em> (Infectious Diseases: Epidemiology and Prevention)</p>
+        </article>
+        <article class="pub">
+          <p class="title">Artificial intelligence in nutrigenomics for maternal-child nutrition in low- and middle-income countries: Opportunities, constraints, and public health ethics</p>
+          <p class="venue">Narrative review under review, <em>Frontiers in Nutrition</em> (Nutritional Epidemiology)</p>
+        </article>
+      </div>
+    </details>
+  </section>
+
+  <section id="experience" aria-labelledby="h-exp">
+    <h2 id="h-exp">Experience</h2>
+    <p class="section-lede">Research, clinical laboratory and teaching roles in Lagos and Bayelsa State, Nigeria.</p>
+    <div class="toolbar"><button type="button" data-toggle="experience">Expand all</button></div>
+
+    <details open>
+      <summary>
+        <h3>Research experience</h3>
+        <span class="meta">2017 – present</span>
+        <span class="desc">Malaria drug-resistance genetics, vaccine safety studies and quantitative biology education research.</span>
+      </summary>
+      <div class="body">
+        <div class="entry">
+          <h4>Researcher (Volunteer), Pharma Research Consortium Virtual Research Team</h4>
+          <span class="when">Jan 2023 – present | Remote, Nigeria</span>
+          <ul>
+            <li>Identify and analyse genetic mutations linked to sulfadoxine-pyrimethamine resistance in malaria cases in Yaba, Nigeria.</li>
+            <li>Support studies evaluating the safety, acute and sub-acute effects, and immunogenicity of SARS-CoV-2 vaccines.</li>
+            <li>Synthesise biomedical literature and organise research information for multidisciplinary projects.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h4>Biology Research Assistant, Department of Science Education (Biology), Niger Delta University</h4>
+          <span class="when">2018 – 2023 | Bayelsa State</span>
+          <ul>
+            <li>Conducted literature reviews and supported quantitative research on study habits, learning outcomes and academic performance in biology.</li>
+            <li>Processed datasets in Excel using formulas and pivot tables to build evidence for educational interventions.</li>
+            <li>Supported questionnaire design, data collection and interpretation.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h4>Undergraduate Researcher, Niger Delta University</h4>
+          <span class="when">2017 – 2018 | Bayelsa State</span>
+          <ul>
+            <li>Designed a quasi-experimental study comparing practical-work instruction with lecture-only instruction in senior-secondary biology.</li>
+            <li>Built and administered a Biology Achievement Test; analysed results with ANOVA and independent-samples t-tests (α = 0.05).</li>
+            <li>Developed the thesis into a first-author peer-reviewed publication (2024).</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <h3>Clinical laboratory experience</h3>
+        <span class="meta">2023 – present</span>
+        <span class="desc">Specimen handling, coagulation and haematology support, and quality assurance in a hospital laboratory.</span>
+      </summary>
+      <div class="body">
+        <div class="entry">
+          <h4>Laboratory Technician, Nigerian Railway Hospital</h4>
+          <span class="when">Jan 2023 – present | Lagos State</span>
+          <ul>
+            <li>Collect and prepare blood, urine and other specimens under the supervision of licensed laboratory scientists.</li>
+            <li>Support coagulation testing, blood and body-fluid cell investigations, and morphology counts.</li>
+            <li>Maintain records and contribute to quality-assurance procedures for test accuracy and consistency.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <h3>Teaching and academic experience</h3>
+        <span class="meta">2016 – 2021</span>
+        <span class="desc">University genetics and cell biology modules, and senior-secondary biology with a 100% national exam pass rate.</span>
+      </summary>
+      <div class="body">
+        <div class="entry">
+          <h4>Biology Teaching Assistant, Niger Delta University</h4>
+          <span class="when">2018 – 2021 | Bayelsa State</span>
+          <ul>
+            <li>Co-taught Introduction to Biological Techniques, Genetics and Cell Biology.</li>
+            <li>Ran laboratory sessions, graded assessments and recommended improvements to lab delivery.</li>
+            <li>Organised extra support for students struggling with scientific concepts.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h4>Biology Teacher Intern, Fortunate Group of Schools</h4>
+          <span class="when">2016 – 2017 | Bayelsa State</span>
+          <ul>
+            <li>Taught senior-secondary biology and aligned assessments with curriculum standards.</li>
+            <li>Adapted lessons for inclusive learning and prepared students for science fairs.</li>
+            <li>Final-year class achieved a 100% pass rate in the WASSC examination.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <h3>Leadership and service</h3>
+        <span class="meta">2018 – present</span>
+        <span class="desc">Community advocacy on maternal and child health, malaria prevention, literacy and hygiene.</span>
+      </summary>
+      <div class="body">
+        <div class="entry">
+          <h4>Project Manager (Volunteer), Mother and Child Health Project</h4>
+          <span class="when">2022 – present</span>
+          <ul><li>Coordinate community advocacy on maternal and child health and malaria prevention.</li></ul>
+        </div>
+        <div class="entry">
+          <h4>Project Coordinator, National Youth Service Corps</h4>
+          <span class="when">2018 – 2019</span>
+          <ul><li>Led community literacy and personal-hygiene campaigns.</li></ul>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="education" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education</h2>
+    <p class="section-lede">Dual training in biological sciences and science education.</p>
+    <details open>
+      <summary>
+        <h3>B.Sc.Ed. (Hons.) Biology, Niger Delta University</h3>
+        <span class="meta">2013 – 2018 | Bayelsa State, Nigeria</span>
+        <span class="desc">Second Class Honours (Upper Division), top 1% of class.</span>
+      </summary>
+      <div class="body">
+        <ul>
+          <li>CGPA 4.18/5.00; WES-evaluated GPA 3.52/4.00; reported percentage 88.5%.</li>
+          <li>Major coursework and teaching support in genetics, cell biology and biological techniques.</li>
+          <li>Best Graduating Biology Student, School of Science Education (2018).</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section id="skills" aria-labelledby="h-skills">
+    <h2 id="h-skills">Technical and analytical skills</h2>
+    <p class="section-lede">Bench, computational and statistical methods used across my research and laboratory work.</p>
+    <details open>
+      <summary>
+        <h3>Skills overview</h3>
+        <span class="desc">Clinical lab, molecular biology, bioinformatics, research design and data analysis.</span>
+      </summary>
+      <div class="body table-wrap">
+        <table class="skills">
+          <tr><th scope="row">Clinical laboratory</th><td>Specimen collection and preparation; coagulation testing support; cell and morphology counts; quality-assurance documentation.</td></tr>
+          <tr><th scope="row">Molecular biology</th><td>DNA extraction, PCR, gel electrophoresis; working knowledge of Southern, Northern and Western blotting.</td></tr>
+          <tr><th scope="row">Bioinformatics</th><td>Ensembl, BioEdit, NCBI (PubMed, BLAST, Gene, Protein, Nucleotide); sequence analysis.</td></tr>
+          <tr><th scope="row">Research methods</th><td>Literature synthesis; quasi-experimental design; questionnaire design; quantitative and qualitative data collection.</td></tr>
+          <tr><th scope="row">Data analysis</th><td>R, SPSS, Excel; data cleaning; descriptive and inferential statistics; ANOVA; t-tests; data visualisation.</td></tr>
+          <tr><th scope="row">Writing and tools</th><td>Microsoft Office; Google Workspace; APA and Vancouver referencing.</td></tr>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section id="training" aria-labelledby="h-train">
+    <h2 id="h-train">Training, certifications and honours</h2>
+    <p class="section-lede">Specialist courses, awards and professional memberships.</p>
+    <div class="toolbar"><button type="button" data-toggle="training">Expand all</button></div>
+
+    <details>
+      <summary>
+        <h3>Certifications and training</h3>
+        <span class="desc">Bioinformatics and genomics with EMBL-EBI, plus clinical and biomedical courses including Good Clinical Practice.</span>
+      </summary>
+      <div class="body">
+        <div class="entry">
+          <h4>Bioinformatics and genomics (EMBL-EBI / NOBLEKINMAT)</h4>
+          <ul><li>Gene structure, sequence alignment, phylogenetics, Ensembl browser, parasite protein annotation.</li></ul>
+        </div>
+        <div class="entry">
+          <h4>Biomedical and clinical</h4>
+          <ul><li>Good Clinical Practice; antimicrobial resistance; cancer biology; cancer screening quality; public-health emergency response.</li></ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <h3>Honours and awards</h3>
+        <span class="desc">Two university best-student awards and an international internship tuition waiver.</span>
+      </summary>
+      <div class="body">
+        <ul>
+          <li>Best Graduating Biology Student, School of Science Education, Niger Delta University (2018)</li>
+          <li>Best Biology Student of the Academic Year, Niger Delta University (2013/2014)</li>
+          <li>GlobalShala Remote Internship tuition-fee waiver, US$2,500 (2023)</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <h3>Professional affiliations</h3>
+        <span class="desc">Science education, molecular biology and global health networks.</span>
+      </summary>
+      <div class="body">
+        <ul>
+          <li>Science Teachers Association of Nigeria</li>
+          <li>Molecular Biology Network</li>
+          <li>Global Health Network</li>
+          <li>EducationUSA Ibadan</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <p class="section-lede">Open to research collaborations and graduate research opportunities.</p>
+    <div class="contact">
+      <p>Email <a href="mailto:patricia2nneji@gmail.com">patricia2nneji@gmail.com</a> or call <a href="tel:+2348104436241">+234 810 443 6241</a>. Based in Lagos, Nigeria.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:patricia2nneji@gmail.com">Send an email</a>
+        <a class="btn" href="https://orcid.org/0009-0008-7007-903X" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://www.researchgate.net/profile/Patricia-Nneji" target="_blank" rel="noopener">ResearchGate</a>
+        <a class="btn" href="https://linkedin.com/in/patricia-nneji" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Patricia O. Nneji</span>
+  <a href="#top">Back to top</a>
+</footer>
+
+<script>
+// Draw the double helix: two sine strands with base-pair rungs
+(function(){
+  var ns='http://www.w3.org/2000/svg', g=document.getElementById('rungs');
+  var cx=160, amp=95, top=10, h=280, turns=1.5, a='', b='';
+  for(var i=0;i<=140;i++){
+    var y=top+i*h/140, t=(i/140)*turns*2*Math.PI, dx=Math.sin(t)*amp;
+    a+=(i?'L':'M')+(cx+dx).toFixed(1)+' '+y.toFixed(1);
+    b+=(i?'L':'M')+(cx-dx).toFixed(1)+' '+y.toFixed(1);
+  }
+  document.getElementById('strandA').setAttribute('d',a);
+  document.getElementById('strandB').setAttribute('d',b);
+  for(var k=0;k<=28;k++){
+    var yy=top+k*10, tt=(k/28)*turns*2*Math.PI, d=Math.sin(tt)*amp;
+    var l=document.createElementNS(ns,'line');
+    l.setAttribute('x1',cx-d);l.setAttribute('x2',cx+d);l.setAttribute('y1',yy);l.setAttribute('y2',yy);
+    g.appendChild(l);
+    if(k%4===0){var c=document.createElementNS(ns,'circle');c.setAttribute('cx',cx+d);c.setAttribute('cy',yy);c.setAttribute('r',3.5);g.appendChild(c);}
+  }
+})();
+// Expand / collapse all dropdowns within a section
+document.querySelectorAll('[data-toggle]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var openAll=btn.textContent==='Expand all';
+    document.querySelectorAll('#'+btn.dataset.toggle+' details').forEach(function(d){d.open=openAll});
+    btn.textContent=openAll?'Collapse all':'Expand all';
+  });
+});
+// Highlight the current section in the quick-jump bar
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.nav ul a')), map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if(!('IntersectionObserver' in window))return;
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      links.forEach(function(a){a.classList.remove('active')});
+      var a=map[e.target.id];
+      if(a){a.classList.add('active');var ul=a.closest('ul');ul.scrollLeft=a.offsetLeft-ul.clientWidth/2+a.clientWidth/2;}
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s)});
+})();
+</script>
+</body>
+</html>
